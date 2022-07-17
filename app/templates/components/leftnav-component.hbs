@@ -1,25 +1,17 @@
-<div class="leftNav" style="width: 60px; height: 100vh; position: absolute; background-color: #12344D;">
+<div class="left-nav">
   <BsNav
   @type="pills"
   @justified={{false}}
   @stacked={{true}}
   @fill={{false}} as |nav|
 >
-  <nav.item style="width: 52px;
-    height: 60px;
-    padding: 8px;
-    margin: 0 auto;
-  ">
-    <div>
-      {{#link-to "index"}}
-          {{svg-jar 'ft' class='icon' width='32px'}}
-      {{/link-to}}
-    </div>
-  </nav.item>
-  {{!-- <nav.item>
-    <p>Hello 2 </p>
-  </nav.item> --}}
-  
-</BsNav>
+    <nav.item class="left-nav-item">
+      <div>
+        {{#link-to "index"}}
+          {{svg-jar "ft" class="icon" width="32px"}}
+        {{/link-to}}
+      </div>
+    </nav.item>
+  </BsNav>
 </div>
 {{yield}}
