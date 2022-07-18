@@ -1,0 +1,23 @@
+<div class="user-sort-filter-cont">
+  <span>Sort by:</span>
+  <BsDropdown @tagName="span" as |dd|>
+    <dd.toggle>
+      <span class="caret"></span>
+    </dd.toggle>
+    <dd.menu as |menu|>
+      <menu.item>
+      <a href="#" {{action "sortUser" preventDefault=false}}>First name</a>
+      </menu.item>
+      <menu.divider/>
+      <menu.item>
+      <a href="#">Last name</a>
+      </menu.item>
+      <menu.divider/>
+      <menu.item>
+      <a href="#">Joining Date</a>
+      </menu.item>
+      <menu.divider/>
+    </dd.menu>
+  </BsDropdown>
+</div>
+{{yield results}}
