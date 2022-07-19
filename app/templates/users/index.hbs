@@ -3,16 +3,19 @@
 </div>
 
 <div class="users-list container">
-    {{#user-search filter=(action 'searchByName') sort_by=sort_by
-      as |searchResults| 
-    }}
-      <div class="row">
-        {{#each searchResults as |user|}}
-          <div class="user_column col-md-4 col-lg-3 col-xl-2">
-            {{user-listing user=user}}
-          </div>
-        {{/each}}
+  {{user-sort sortAction=(action 'setSortBy') sortOrder=(action 'setSortOrder')}}
+  {{user-search filter=(action 'searchByName')}}
+  <div class="row">
+    {{#each userModel as |user|}}
+      <div class="user_column col-md-4 col-lg-3 col-xl-2">
+        {{user-listing user=user}}
       </div>
-    {{/user-search}}
+    {{/each}}
+  </div>
+  {{#each teamsModel as |team|}}
+      <div class="user_column col-md-4 col-lg-3 col-xl-2">
+        {{team}}
+      </div>
+    {{/each}}
 </div>
 {{outlet}}

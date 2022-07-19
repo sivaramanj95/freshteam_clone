@@ -6,14 +6,14 @@ export default Component.extend({
 
   init() {
     this._super(...arguments);
-    this.filter('').then((results) => this.set('results', results));
+    this.filter('');
   },
 
   actions: {
     handleUserEntry() {
       let filterInputValue = this.value;
       let searchAction = this.filter;
-      searchAction(filterInputValue).then((filterResults) => this.set('results', filterResults));
+      searchAction(filterInputValue);
     }
   }
 

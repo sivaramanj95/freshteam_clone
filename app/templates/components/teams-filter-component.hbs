@@ -1,0 +1,13 @@
+<BsDropdown class="teams-filter-dropdown" as |Dropdown|>
+  <Dropdown.toggle>
+    <span class="caret"></span>
+  </Dropdown.toggle>
+  <Dropdown.menu as |menu|>
+    {{#each this.teams as |team|}}
+       <menu.item>
+        <a>team</a>
+       </menu.item>
+    {{/each}}
+  </Dropdown.menu>
+</BsDropdown>
+{{yield}}

@@ -6,18 +6,26 @@
     </dd.toggle>
     <dd.menu as |menu|>
       <menu.item>
-      <a href="#" {{action "sortUser" preventDefault=false}}>First name</a>
+        <a href="#" onclick={{action "setSortBy" 'first_name' preventDefault=false}}>First name</a>
       </menu.item>
       <menu.divider/>
       <menu.item>
-      <a href="#">Last name</a>
+        <a href="#" onclick={{action "setSortBy" 'last_name' preventDefault=false}}>Last name</a>
       </menu.item>
       <menu.divider/>
       <menu.item>
-      <a href="#">Joining Date</a>
+        <a href="#" onclick={{action "setSortBy" 'joining_date' preventDefault=false}}>Joining Date</a>
       </menu.item>
+      <menu.divider/>
+      {{!-- <menu.item>
+        <a href="#" onclick={{action "setSortOrder" 'asc' preventDefault=false}}>Ascending</a>
+      </menu.item>
+      <menu.divider/>
+      <menu.item>
+        <a href="#" onclick={{action "setSortOrder" 'desc' preventDefault=false}}>Descending</a>
+      </menu.item> --}}
       <menu.divider/>
     </dd.menu>
   </BsDropdown>
 </div>
-{{yield results}}
+{{yield sortedResults}}
