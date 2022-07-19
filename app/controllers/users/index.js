@@ -4,20 +4,25 @@ import {computed} from '@ember/object';
 export default Controller.extend({
   sortBy: 'first_name',
   sortOrder: 'asc',
+  teamFilter: 'all',
   store: service,
   searchKeyWord: '',
-  userModel: computed('sortBy', 'searchKeyWord', function () {
+  userModel: computed('sortBy', 'searchKeyWord', 'teamFilter', function () {
     let keyWord = this.get('searchKeyWord')
-    if(keyWord != '') {
-      let result = this.store.peekAll('user').filter(function(i) {
+    let teamFilter = this.get('teamFilter')
+    console.log(teamFilter)
+    let result = this.store.peekAll('user');
+    if (keyWord != '') {
+      result = result.filter(function(i) {
         return i.name.toLowerCase().indexOf(keyWord.toLowerCase()) > -1;
       })
-      return result.sortBy(this.get('sortBy'));
     }
-    else {
-      return this.store.peekAll('user').sortBy(this.get('sortBy'));
+    if (teamFilter !== 'all') {
+      result = result.filter(function(i) {
+        return i.team === teamFilter
+      })
     }
-    
+    return result.sortBy(this.get('sortBy'));;
   }),
 
   actions: {
@@ -29,7 +34,9 @@ export default Controller.extend({
     },
     setSortOrder(sortOrder) {
       this.set('sortOrder', sortOrder)
-      console.log(this.get('sortOrder'))
+    },
+    setTeamFilter(team) {
+      this.set('teamFilter', team)
     }
   }
 });

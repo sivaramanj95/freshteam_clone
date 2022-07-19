@@ -5,6 +5,7 @@
 <div class="users-list container">
   {{user-sort sortAction=(action 'setSortBy') sortOrder=(action 'setSortOrder')}}
   {{user-search filter=(action 'searchByName')}}
+  {{teams-filter-component filter=(action 'setTeamFilter')}}
   <div class="row">
     {{#each userModel as |user|}}
       <div class="user_column col-md-4 col-lg-3 col-xl-2">
@@ -12,10 +13,5 @@
       </div>
     {{/each}}
   </div>
-  {{#each teamsModel as |team|}}
-      <div class="user_column col-md-4 col-lg-3 col-xl-2">
-        {{team}}
-      </div>
-    {{/each}}
 </div>
 {{outlet}}
