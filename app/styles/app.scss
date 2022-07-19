@@ -126,3 +126,26 @@
   color: #607787; 
   font-weight: 400;
 }
+
+.user-search-cont {
+  position: absolute;
+  right: 10px;
+  top: 130px;
+}
+
+.user-search-input {
+  width: 400px;
+}
+.user-search-input::placeholder {
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #183247;
+
+  opacity: 0.3;
+}
+.team-filter-cont {
+  display: flex;
+}

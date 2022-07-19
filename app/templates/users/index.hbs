@@ -3,12 +3,15 @@
 </div>
 
 <div class="users-list container">
+  {{user-sort sortAction=(action 'setSortBy') sortOrder=(action 'setSortOrder')}}
+  {{user-search filter=(action 'searchByName')}}
+  {{teams-filter-component filter=(action 'setTeamFilter')}}
   <div class="row">
-    {{#each model as |user|}}
+    {{#each userModel as |user|}}
       <div class="user_column col-md-4 col-lg-3 col-xl-2">
         {{user-listing user=user}}
       </div>
     {{/each}}
-  </div>  
+  </div>
 </div>
 {{outlet}}

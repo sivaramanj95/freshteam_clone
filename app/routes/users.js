@@ -11,7 +11,7 @@ export default Route.extend({
       joiningDate: '2020-07-22',
       image_url: "https://images.unsplash.com/photo-1581803118522-7b72a50f7e9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
     }, {
-      first_name: 'Koushi',
+      first_name: 'Koushikk',
       last_name: 'R',
       email: 'koushik.r@gmail.com',
       team: 'Freshteam',
@@ -22,7 +22,7 @@ export default Route.extend({
       first_name: 'Koushi',
       last_name: 'R',
       email: 'koushik.r@gmail.com',
-      team: 'Freshteam',
+      team: 'Sales',
       joiningDate: '2019-06-24',
       image_url: "https://images.unsplash.com/photo-1605462863863-10d9e47e15ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fG1hbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
     },
@@ -67,7 +67,7 @@ export default Route.extend({
       first_name: 'Prathees',
       last_name: 'R',
       email: 'prathees.r@gmail.com',
-      team: 'Freshteam',
+      team: 'Business',
       joiningDate: '2010-06-24',
       image_url: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bWFufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
     },
@@ -75,7 +75,7 @@ export default Route.extend({
       first_name: 'Ela',
       last_name: 'R',
       email: 'ela.r@gmail.com',
-      team: 'Freshteam',
+      team: 'Security',
       joiningDate: '2010-01-24',
       image_url: "https://images.unsplash.com/photo-1600878459138-e1123b37cb30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1306&q=80"
     },
@@ -83,7 +83,7 @@ export default Route.extend({
       first_name: 'test',
       last_name: 'user',
       email: 'test.r@gmail.com',
-      team: 'Freshteam',
+      team: 'Management',
       joiningDate: '2021-06-24'
     },
     {
@@ -97,7 +97,7 @@ export default Route.extend({
       first_name: 'Mathi',
       last_name: 'R',
       email: 'mathi.r@gmail.com',
-      team: 'Freshteam',
+      team: 'Sales',
       joiningDate: '2019-07-02',
       image_url: "https://images.unsplash.com/photo-1590086782957-93c06ef21604?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fG1hbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
     },
