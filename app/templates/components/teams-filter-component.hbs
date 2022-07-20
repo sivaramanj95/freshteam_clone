@@ -6,7 +6,7 @@
     </Dropdown.toggle>
     <Dropdown.menu as |menu|>
       <menu.item>
-        <a href="#" onclick={{action "filterByTeams" 'all' preventDefault=false}}>All Employees</a>
+        <a href="#" onclick={{action "filterByTeams" "all" preventDefault=false}}>All Employees</a>
       </menu.item>
       <menu.divider/>
       {{#each this.teams as |team|}}

@@ -10,7 +10,6 @@ export default Controller.extend({
   userModel: computed('sortBy', 'searchKeyWord', 'teamFilter', function () {
     let keyWord = this.get('searchKeyWord')
     let teamFilter = this.get('teamFilter')
-    console.log(teamFilter)
     let result = this.store.peekAll('user');
     if (keyWord != '') {
       result = result.filter(function(i) {
@@ -22,7 +21,7 @@ export default Controller.extend({
         return i.team === teamFilter
       })
     }
-    return result.sortBy(this.get('sortBy'));;
+    return result.sortBy(this.get('sortBy'));
   }),
 
   actions: {
