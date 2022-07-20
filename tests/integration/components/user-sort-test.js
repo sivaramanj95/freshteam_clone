@@ -27,7 +27,6 @@ module('Integration | Component | user-sort', function(hooks) {
     this.set('setSortBy', () => resolve({}));
     await render(hbs`{{user-sort sortAction=(action setSortBy)}}`);
     await click('.user-sort-filter-cont .sortby-dropdown .sortby-dropdown-toggle');
-    // console.log(this.element.querySelector('.user-sort-filter-cont .sortby-dropdown'))
     assert.dom('.user-sort-filter-cont .sortby-dropdown .dropdown-menu a').exists({ count: 3 }, 'It renders all the sort by option');
   });
   test('it renders sort by firstname', async function(assert) {

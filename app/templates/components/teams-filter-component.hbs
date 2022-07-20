@@ -1,7 +1,7 @@
 <div class="team-filter-cont">
   <span>Filter By</span>
   <BsDropdown class="teams-filter-dropdown" as |Dropdown|>
-    <Dropdown.toggle>
+    <Dropdown.toggle class="teams-filter-toggle">
       <span class="caret"></span>
     </Dropdown.toggle>
     <Dropdown.menu as |menu|>
@@ -11,7 +11,7 @@
       <menu.divider/>
       {{#each this.teams as |team|}}
         <menu.item>
-          <a href="#" onclick={{action "filterByTeams" team preventDefault=false}}>{{team}}</a>
+          <a href="#" class={{team}} onclick={{action "filterByTeams" team preventDefault=false}}>{{team}}</a>
         </menu.item>
         <menu.divider/>
       {{/each}}
