@@ -3,6 +3,8 @@
 </div>
 
 <div class="users-list container">
+  <h3>{{#link-to "users.new" }}Add Employees{{/link-to}}</h3>
+
   {{user-sort sortAction=(action 'setSortBy') sortOrder=(action 'setSortOrder')}}
   {{user-search filter=(action 'searchByName')}}
   {{teams-filter-component filter=(action 'setTeamFilter')}}

@@ -1,0 +1,43 @@
+<BsModal as |Modal|>
+  <Modal.header>
+    <h4 class="modal-title"><i class="glyphicon glyphicon-alert"></i> Add Employee</h4>
+  </Modal.header>
+  <Modal.body>
+    <form {{action 'submitForm' on='submit'}} class="form-custom">
+      <p>
+        <label>First Name</label>
+        {{input type="text" value=first_name}}
+      </p>
+      <p>
+        <label>Last Name</label>
+        {{input type="text" value=last_name}}
+      </p>
+      <p>
+        <label>Email</label>
+        {{input type="email" value=email}}
+      </p>
+      <p>
+      <label>Date of joining</label>
+        <BootstrapDatepicker @value={{this.myDate}}/>
+      </p>
+      <p>
+      <label>Team</label>
+        <PowerSelect
+            @options={{teamOptions}}
+            @placeholder="Select a Team"
+            @selected={{selectedTeam}}
+            @onchange={{action "setselectedTeam"}}
+            @renderInPlace=true
+            @searchEnabled=false
+            as |filter| >
+            {{filter.name}}
+        </PowerSelect>
+      </p>
+    </form>
+  </Modal.body>
+  
+  <Modal.footer as |footer|>
+    <BsButton @onClick={{action "close"}} @type="danger">Cancel</BsButton>
+    <BsButton @onClick={{action Modal.submit}} @type="success">Add Employee</BsButton>
+  </Modal.footer>
+</BsModal>
