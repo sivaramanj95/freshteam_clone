@@ -1,4 +1,7 @@
 <div class="card user_card">
+  {{#link-to "users.edit" user}}
+    {{svg-jar "edit" class="icon" width="14px"}}
+  {{/link-to}}
   {{user-avatar user=user}}
   <p class="user_name">{{user.name}}</p>
   <p class="user_email">{{user.email}}</p>
