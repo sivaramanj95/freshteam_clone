@@ -1,4 +1,13 @@
 <div class="card user_card">
+  <div class="employee_card_actions">
+    {{#link-to "users.edit" user}}
+      {{svg-jar "edit" class="icon" width="18px"}}
+    {{/link-to}}
+    {{#link-to "users.delete" user}}
+      {{svg-jar "emp-delete" class="icon" width="18px"}}
+    {{/link-to}}
+  </div>
+  
   {{user-avatar user=user}}
   <p class="user_name">{{user.name}}</p>
   <p class="user_email">{{user.email}}</p>
