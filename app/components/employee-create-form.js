@@ -4,11 +4,12 @@ import {inject as service} from '@ember/service';
 export default Component.extend({
   router: service(),
   store: service(),
-  teamOptions: [{name: 'Freshteam', id: '1', displayName:''}, {name: 'Sales'}, {name: 'Business'}],
+  teamOptions: [{name: 'Freshteam'}, {name: 'Sales'}, {name: 'Business'}],
   selectedTeam: '',
   init() {
     this._super()
-    this.set('selectedTeam', {name: this.get('user.team')})
+    let tempTeam = this.get('user.team') === ''|| typeof this.get('user.team') === 'undefined' ? 'Freshteam' :  this.get('user.team')
+    this.set('selectedTeam', {name: tempTeam})
   },
   actions: {
     setselectedTeam(filter) {

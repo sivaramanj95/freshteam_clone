@@ -1,0 +1,13 @@
+<BsModal @onSubmit={{action 'userDelete' user}} as |Modal|>
+  <Modal.header>
+    <h4 class="modal-title"><i class="glyphicon glyphicon-alert"></i> Add Employee</h4>
+  </Modal.header>
+  <Modal.body>
+    <p>Are you sure want to delete it?</p>
+  </Modal.body>
+  
+  <Modal.footer as |footer|>
+    <BsButton @onClick={{action "close"}} @type="danger">Cancel</BsButton>
+    <BsButton @onClick={{action Modal.submit}} @type="success">Delete</BsButton>
+  </Modal.footer>
+</BsModal>
